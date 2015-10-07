@@ -2,7 +2,7 @@
 
 ![Halcyon](assets/readme_1.png)
 
-Halcyon Days is a modern and stylish HTML5/CSS3 template with a pixel-perfect design and smooth effects. It’s especially fitting for a portfolio or start-up website, but it’s also very versatile and can be used for many other projects.
+Halcyon Days is a modern and stylish HTML5/CSS3 template with a pixel-perfect design and smooth effects. It’s especially fitting for a portfolio or start-up website, but it’s also very versatile and can be used for many other projects. Template is designed by [Peter Finlan](http://peterfinlan.com/) exclusively for Codrops.
 
 # Built on:
 
@@ -77,3 +77,36 @@ If you want to set Halcyon as the default theme, you can do so by following thes
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **halcyon** folder.
+
+
+## Credits
+
+### Bootstrap
+
+[Bootstrap](http://getbootstrap.com/) by Twitter. Licensed under [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+### FancyBox
+
+[FancyBox](http://fancyapps.com/fancybox/) by fancyApps. Licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/)
+
+### FlexSlider
+
+[FlexSlider](http://www.woothemes.com/flexslider/) by WooThemes. Licensed under [GNU GENERAL PUBLIC LICENSE](https://github.com/woothemes/FlexSlider/blob/master/LICENSE.md)
+
+### Waypoints
+
+[Waypoints](https://github.com/imakewebthings/waypoints) by Caleb Troughton. Licensed under [MIT](https://github.com/imakewebthings/waypoints/blog/master/licenses.txt)
+
+### Animate.css
+
+[Animate.css](https://daneden.github.io/animate.css/) by Dan Eden
+
+### Font Awesome Icons
+
+[Font Awesome](http://fortawesome.github.io/Font-Awesome/) by Dave Gandy. Licensed under [MIT](http://opensource.org/licenses/mit-license.html)
+
+## Misc
+
+Follow Pete: [Twitter](https://twitter.com/peterfinlan), [Dribbble](http://www.dribbble.com/peterfinlan), [GitHub](https://github.com/peterfinlan)
+
+Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
