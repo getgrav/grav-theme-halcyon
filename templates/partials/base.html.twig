@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
 <head>
     {% block head %}
         <meta charset="utf-8" />
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.ico') }}" />
 
          {% block stylesheets %}
                 {% do assets.addCss('theme://css/bootstrap.min.css') %}
                 {% do assets.addCss('theme://css/jquery.fancybox.css') %}
-                {% do assets.addCss('theme://css/flickity.css') %}
-                {% do assets.addCss('theme://css/animate.css') %}
+                {% do assets.addCss('theme://css/flexslider.css') %}
                 {% do assets.addCss('theme://css/styles.css') %}
                 {% do assets.addCss('theme://css/queries.css') %}
+                {% do assets.addCss('theme://css/animate.css') %}
         {% endblock %}
         {{ assets.css() }}
-
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-
-        <script src="{{ url('theme://js/modernizr.custom.js') }}"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,14 +26,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
         {% endblock head%}
     </head>
-    <body>
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <!-- open/close -->
-
+    <body id="top">
         {% block header %}
              {% include 'partials/header.html.twig' %}
         {% endblock %}
@@ -53,22 +43,14 @@
              {% include 'partials/footer.html.twig' %}
         {% endblock %}
 
-        {% block navigation %}
-           {% include 'partials/navigation.html.twig' %}
-        {% endblock %}
-
         {% block javascripts %}
-            {% do assets.addJs('theme://js/min/toucheffects-min.js') %}
             {% do assets.add('jquery',101) %}
-            {% do assets.addJs('theme://js/flickity.pkgd.min.js') %}
-            {% do assets.addJs('theme://js/jquery.fancybox.pack.js') %}
-            {% do assets.addJs('theme://js/retina.js') %}
             {% do assets.addJs('theme://js/waypoints.min.js') %}
             {% do assets.addJs('theme://js/bootstrap.min.js') %}
-            {% do assets.addJs('theme://js/min/scripts-min.js') %}
+            {% do assets.addJs('theme://js/scripts.js') %}
+            {% do assets.addJs('theme://js/jquery.flexslider.js') %}
+            {% do assets.addJs('theme://js/modernizr.js') %}
         {% endblock %}
         {{ assets.js() }}
-
-     
     </body>
 </html>

@@ -1,20 +1,25 @@
-<div class="overlay overlay-halcyon">
-    <nav>
-        {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
-        {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
-            
-        {% for row in page.collection()|batch(2) %}
-         <ul>
-          {% for module in row %} 
+<nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+        <nav class="pull">
+          {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+          {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+          <ul class="top-nav">
+            {% for module in page.collection() %}
+
             {% if not module.header.hidemenu %}
             {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-                <li class="{{ current_module }}">
-                    <a href="#{{ _self.pageLinkName(module.menu) }}"><i class="fa fa-link"></i>{{ module.menu }}</a>
-                </li>
-            {% endif %}    
-        {% endfor %}
-    </ul>
-        {% endfor %}
+            <li class="{{ current_module }}">
+              <a href="#{{ _self.pageLinkName(module.menu) }}"><span class="indicator"><i class="fa fa-angle-right"></i></span>{{ module.menu }}</a>
+            </li>
+            {% endif %}
 
-    </nav>
-</div>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</nav>
