@@ -1,28 +1,23 @@
-<section class="features-intro">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 nopadding features-intro-img">
-                <div class="features-bg">
-                    <div class="texture-overlay"></div>
-                    <div class="features-img wp1">
-                        <img src="{{ page.media[page.header.logo].url }}" alt="Logo">
-                    </div>
-                </div>
+<section class="features text-center section-padding" id="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{ page.content }}
+        <div class="features-wrapper">
+          {% for item in page.header.features %}
+          <div class="col-md-4 feature-{{ loop.index }} wp2 {% if item.delay %}delay-{{ item.delay }}s{% endif %}">
+            <div class="icon">
+              <i class="fa fa-{{ item.icon }}"></i>
             </div>
-            <div class="col-md-6 nopadding">
-                <div class="features-slider">
-                    <ul class="slides" id="featuresSlider">
-                        {% for slide in page.header.slider %}
-                            <li>
-                                <h1>{{ slide.title }}</h1>
-                                <p>{{ slide.content }}</p>
-                                <p><a href="{{ slide.link_url }}" class="arrow-btn">{{ slide.link_text }} <i class="fa fa-long-arrow-right"></i></a></p>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.content }}</p>
+            {% if item.text or item.link %}
+            <a href="{{ item.link }}" class="read-more-btn">{{ item.text }} <i class="fa fa-chevron-circle-right"></i></a>
+            {% endif %}
+          </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
+  </div>
 </section>
-
