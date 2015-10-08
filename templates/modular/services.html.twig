@@ -9,13 +9,15 @@
     <div class="container designs">
       <div class="row">
         <div class="col-md-5 col-md-offset-7">
-        <div id="servicesSlider">
+          <div id="servicesSlider">
             <ul class="slides">
               {% for slide in page.header.slides %}
               <li>
                 <h1 class="arrow">{{ slide.title }}</h1>
-                <p>{{ slide.content }}</p>
+                {{ slide.content }}
+                {% if slide.link_url or slide.link_text %}
                 <p><a href="{{ slide.link_url }}" class="arrow-btn">{{ slide.link_text }} <i class="fa fa-long-arrow-right"></i></a></p>
+                {% endif %}
               </li>
               {% endfor %}
             </ul>
