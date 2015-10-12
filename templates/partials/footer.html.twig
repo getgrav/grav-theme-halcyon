@@ -1,26 +1,18 @@
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <h1 class="footer-logo">
-                    <img src="{{ url('theme://img/logo-blue.png') }}" alt="Footer Logo Blue">
-                </h1>
-                <p>© Halcyon 2015 - <a href="http://tympanus.net/codrops/licensing/">License</a> - Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Peter Finlan</a></p>
-            </div>
-            <div class="col-md-7">
-                <ul class="footer-nav">
-                    {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
-                        {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
-                            {% for module in page.collection() %}
-                               {% if not module.header.hidemenu %}
-                                {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-                                    <li class="{{ current_module }}">
-                                        <a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a>
-                                    </li>
-                                {% endif %}    
-                            {% endfor %}
-                            </ul>           
-                        </div>
-                    </div>
-                </div>
-            </footer>
+  <div class="container">
+    <div class="row">
+    {% if site.footer.links %}
+    <div class="col-md-6">
+      <ul class="legals">
+        {% for item in site.footer.links %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    <div class="col-md-6 credit">
+      <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Peter Finlan</a> exclusively for <a href="http://tympanus.net/codrops/"><em>Codrops</em></a></p>
+    </div>
+  </div>
+</div>
+</footer>
