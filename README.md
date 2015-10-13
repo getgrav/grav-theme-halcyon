@@ -79,7 +79,29 @@ If you want to set Halcyon as the default theme, you can do so by following thes
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **halcyon** folder.
 
 
-## Credits
+# Configuration
+Configuration of Halcyon theme consist of two parts:
+* configuration file (from [skeleton](https://github.com/getgrav/grav-skeleton-halcyon-site/commits?author=hexplor)): "user/config/site.yaml"
+* header variables (inside markdown files)
+
+In configuration file you can set basic values for header, footer and general.
+In markdown files, you can manage page content and overall look of the separate section. For example, below is a portfolio.md header section:
+
+```markdown
+portfolio:
+  - title: "Creative Minds"
+    img: portfolio-01.jpg
+    img_text: View More
+    img_url: "#"
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero."
+```
+
+In above example you can specify title, image, roll over text, url and content for each separate portfolio element.
+
+Rest of the sections is made in similar approach. Remember to preserve original idenation to avoid issues.
+
+
+# Credits
 
 ### Bootstrap
 

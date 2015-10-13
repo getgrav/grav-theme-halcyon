@@ -6,8 +6,10 @@
         {{ page.content }}
       </div>
     </div>
+
+    {% for row in page.header.boxes|batch(3) %}
     <div class="row contact-details">
-      {% for item in page.header.boxes %}
+      {% for item in row %}
       <div class="col-md-4">
         <div class="light-box box-hover">
           <h2><i class="fa fa-{{ item.icon }}"></i><span>{{ item.title }}</span></h2>
@@ -16,6 +18,8 @@
       </div>
       {% endfor %}
     </div>
+    {% endfor %}
+
     <div class="row">
       <div class="col-md-12">
         <ul class="social-buttons">
