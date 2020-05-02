@@ -12,7 +12,7 @@
             {% if not module.header.hidemenu %}
             {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
             <li class="{{ current_module }}">
-              <a href="#{{ _self.pageLinkName(module.menu) }}"><span class="indicator"><i class="fa fa-angle-right"></i></span>{{ module.menu }}</a>
+              <a href="#{{ _self.pageLinkName(module.slug) }}"><span class="indicator"><i class="fa fa-angle-right"></i></span>{{ module.menu }}</a>
             </li>
             {% endif %}
 
