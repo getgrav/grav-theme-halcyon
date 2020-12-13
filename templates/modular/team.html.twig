@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        {{ page.content }}
+        {{ page.content|raw }}
       </div>
     </div>
     <div class="row">
@@ -15,7 +15,7 @@
               <div class="col-md-4 wp5 {% if item.delay %}delay-{{ item.delay }}s{% endif %}">
                 <img src="{{ page.media[item.img].url }}" alt="Team">
                 <h2>{{ item.title }}</h2>
-                <p>{{ item.content }}</p>
+                <p>{{ item.content|raw }}</p>
 
                 <div class="social">
                   <ul class="social-buttons">

@@ -1,7 +1,7 @@
 <section class="portfolio text-center section-padding" id="{{ page.slug }}">
   <div class="container">
     <div class="row">
-      {{ page.content }}
+      {{ page.content|raw }}
       <div id="portfolioSlider">
         <ul class="slides">
           {% for row in page.header.portfolio|batch(3) %}
@@ -18,7 +18,7 @@
                 </div>
               </div>
               <h2>{{ item.title }}</h2>
-              <p>{{ item.content }}</p>
+              <p>{{ item.content|raw }}</p>
             </div>
             {% endfor %}
           </li>
