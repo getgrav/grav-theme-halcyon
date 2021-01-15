@@ -1,3 +1,11 @@
+# v1.2.1
+## 01/15/2021
+
+1. [](#improved)
+    * Fixed autoescaping in preparation for Grav 1.7
+    * Moved fontawesome to include `https://`
+    * Removed hardcoded ids from modular
+
 # v1.2.0
 ## 03/21/2019
 
