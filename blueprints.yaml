@@ -1,5 +1,7 @@
 name: Halcyon
-version: 1.2.0
+slug: halcyon
+type: theme
+version: 1.2.1
 description: "Halcyon Days is a modern and stylish HTML5/CSS3 template with a pixel-perfect design and smooth effects."
 icon: group
 author:
