@@ -1,8 +1,8 @@
-<section class="intro text-center section-padding" id="introduction">
+<section class="intro text-center section-padding" id="{{ page.slug }}">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 wp1">
-        {{ page.content }}
+        {{ page.content|raw }}
       </div>
     </div>
   </div>

@@ -1,8 +1,8 @@
-<section class="features text-center section-padding" id="features">
+<section class="features text-center section-padding" id="{{ page.slug }}">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        {{ page.content }}
+        {{ page.content|raw }}
         <div class="features-wrapper">
           {% for item in page.header.features %}
           <div class="col-md-4 feature-{{ loop.index }} wp2 {% if item.delay %}delay-{{ item.delay }}s{% endif %}">
@@ -10,7 +10,7 @@
               <i class="fa fa-{{ item.icon }}"></i>
             </div>
             <h2>{{ item.title }}</h2>
-            <p>{{ item.content }}</p>
+            <p>{{ item.content|raw }}</p>
             {% if item.text or item.link %}
             <a href="{{ item.link }}" class="read-more-btn">{{ item.text }} <i class="fa fa-chevron-circle-right"></i></a>
             {% endif %}
