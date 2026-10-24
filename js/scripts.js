@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 /***************** Slide-In Nav ******************/
 
-$(window).load(function() {
+$(window).on('load', function() {
 
 	$('.nav_slide_button').click(function() {
 		$('.pull').slideToggle();
@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 /***************** Flexsliders ******************/
 
-$(window).load(function() {
+$(window).on('load', function() {
 
 	$('#portfolioSlider').flexslider({
 		animation: "slide",
